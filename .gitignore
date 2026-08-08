@@ -1,0 +1,15 @@
+# Dépendances (dev uniquement : gulp, inutile en production)
+node_modules/
+node_modules.zip
+
+# Artefacts de build en cascade
+# (gulp.src('assets/css/*.css') réattrape les .min déjà générés)
+assets/css/*.min.min*.css
+assets/js/*.min.min*.js
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Sensible
+.env
