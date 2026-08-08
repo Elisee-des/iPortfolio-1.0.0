@@ -631,7 +631,8 @@
 
     .badge-web,
     .badge-mobile,
-    .badge-featured {
+    .badge-featured,
+    .badge-dev {
       padding: 0.4rem 1rem;
       border-radius: 50px;
       font-size: 0.8rem;
@@ -651,6 +652,10 @@
 
     .badge-featured {
       background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    }
+
+    .badge-dev {
+      background: linear-gradient(135deg, #475569, #64748b);
     }
 
     /* Card Content */
@@ -764,6 +769,348 @@
 
     .btn-demo:hover i {
       transform: translateX(5px);
+    }
+
+    /* Variante pour les projets pas encore publics */
+    .btn-demo-soon {
+      background: rgba(100, 116, 139, 0.12);
+      color: var(--gray);
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: default;
+    }
+
+    /* ======= PROJETS PHARES — RA / RV ======= */
+    .featured-projects {
+      margin-bottom: 4.5rem;
+    }
+
+    .featured-intro {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 3rem;
+    }
+
+    .featured-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 1.15rem;
+      margin-bottom: 1.1rem;
+      border-radius: 50px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.1));
+      border: 1px solid rgba(37, 99, 235, 0.25);
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .featured-intro h3 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .featured-intro p {
+      color: var(--gray);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .featured-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      box-shadow: 0 20px 55px rgba(15, 23, 42, 0.1);
+      margin-bottom: 2.5rem;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .featured-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .featured-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 70px rgba(37, 99, 235, 0.18);
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    }
+
+    /* --- Colonne visuelle --- */
+    .featured-visual {
+      background: linear-gradient(160deg, var(--dark), var(--dark-light));
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .featured-visual-main {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+      display: block;
+    }
+
+    .featured-visual-main img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .featured-card:hover .featured-visual-main img {
+      transform: scale(1.04);
+    }
+
+    .featured-thumbs {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .featured-thumb {
+      width: 76px;
+      height: 54px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      opacity: 0.75;
+      transition: all 0.3s ease;
+    }
+
+    .featured-thumb:hover {
+      opacity: 1;
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .featured-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* --- Colonne contenu --- */
+    .featured-body {
+      padding: 2.4rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .featured-badges {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.1rem;
+    }
+
+    .badge-xr,
+    .badge-live {
+      padding: 0.35rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: white;
+      letter-spacing: 0.02em;
+    }
+
+    .badge-xr {
+      background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+    }
+
+    .badge-live {
+      background: linear-gradient(135deg, #059669, #10b981);
+    }
+
+    .featured-title {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 0.85rem;
+      line-height: 1.3;
+    }
+
+    .featured-lead {
+      color: var(--gray);
+      line-height: 1.75;
+      margin-bottom: 1.6rem;
+    }
+
+    .featured-points {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.6rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .featured-points li {
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+      font-size: 0.94rem;
+      line-height: 1.55;
+      color: var(--gray);
+    }
+
+    .featured-points i {
+      color: var(--primary);
+      font-size: 1rem;
+      margin-top: 0.15rem;
+      flex-shrink: 0;
+    }
+
+    .featured-points strong {
+      color: var(--dark);
+      font-weight: 600;
+    }
+
+    .featured-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .metric {
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 12px;
+      padding: 0.6rem 0.95rem;
+    }
+
+    .metric-value {
+      display: block;
+      font-weight: 700;
+      font-size: 1.05rem;
+      line-height: 1.2;
+      color: var(--primary);
+    }
+
+    .metric-label {
+      display: block;
+      font-size: 0.74rem;
+      color: var(--gray);
+      margin-top: 0.15rem;
+    }
+
+    .featured-note {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: var(--gray);
+      background: rgba(100, 116, 139, 0.07);
+      border-left: 3px solid rgba(100, 116, 139, 0.3);
+      border-radius: 0 8px 8px 0;
+      padding: 0.7rem 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .featured-note i {
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .featured-actions {
+      margin-top: auto;
+      padding-top: 1.4rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .featured-stack {
+      font-size: 0.8rem;
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* --- Séparateur avant les autres projets --- */
+    .portfolio-subhead {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .portfolio-subhead h3 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .portfolio-subhead::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, rgba(37, 99, 235, 0.35), rgba(124, 58, 237, 0.05));
+    }
+
+    @media (max-width: 991px) {
+      .featured-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-body {
+        padding: 1.9rem;
+      }
+
+      .featured-intro h3 {
+        font-size: 1.55rem;
+      }
+
+      .featured-title {
+        font-size: 1.35rem;
+      }
+
+      .portfolio-subhead h3 {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .featured-visual {
+        padding: 1.1rem;
+      }
+
+      .featured-body {
+        padding: 1.5rem;
+      }
+
+      .featured-thumb {
+        width: 62px;
+        height: 44px;
+      }
+
+      .featured-metrics .metric {
+        flex: 1 1 calc(50% - 0.3rem);
+      }
     }
 
     .card-stats {
@@ -1788,8 +2135,285 @@
         <!-- Section Title -->
         <div class="section-title" data-aos="fade-up">
           <h2>Réalisations</h2>
-          <p>Découvrez mes projets récents en développement web et mobile</p>
+          <p>Modules de formation immersifs en RA/RV, plateformes e-learning et applications métier</p>
         </div><!-- End Section Title -->
+
+        <!-- ===== Projets phares — Réalité augmentée & virtuelle ===== -->
+        <div class="featured-projects">
+
+          <div class="featured-intro" data-aos="fade-up">
+            <span class="featured-eyebrow"><i class="bi bi-badge-vr"></i> Réalité augmentée &amp; virtuelle</span>
+            <h3>Formation immersive appliquée à l'industrie</h3>
+            <p>
+              Deux modules embarquables dans un LMS, adossés au même socle Laravel : l'apprenant manipule un
+              équipement en réalité augmentée ou parcourt un atelier virtuel, et chaque geste remonte au
+              Learning Record Store en xAPI.
+            </p>
+          </div>
+
+          <!-- Projet phare 01 — Visualiseur RA -->
+          <article class="featured-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="featured-grid">
+
+              <div class="featured-visual">
+                <a href="assets/img/projects/rarvlecon/rarvleconweb1.png"
+                  title="Visualiseur d'objets pédagogiques en RA - Vue principale"
+                  data-gallery="portfolio-gallery-rarvlecon" class="glightbox featured-visual-main">
+                  <img src="assets/img/projects/rarvlecon/rarvleconweb1.png"
+                    alt="Visualiseur d'objets pédagogiques en réalité augmentée">
+                </a>
+                <div class="featured-thumbs">
+                  <a href="assets/img/projects/rarvlecon/rarvleconweb2.png" title="Visualiseur RA - Vue 2"
+                    data-gallery="portfolio-gallery-rarvlecon" class="glightbox featured-thumb">
+                    <img src="assets/img/projects/rarvlecon/rarvleconweb2.png" alt="Visualiseur RA 2">
+                  </a>
+                  <a href="assets/img/projects/rarvlecon/rarvleconweb3.png" title="Visualiseur RA - Vue 3"
+                    data-gallery="portfolio-gallery-rarvlecon" class="glightbox featured-thumb">
+                    <img src="assets/img/projects/rarvlecon/rarvleconweb3.png" alt="Visualiseur RA 3">
+                  </a>
+                  <a href="assets/img/projects/rarvlecon/rarvleconweb4.png" title="Visualiseur RA - Vue 4"
+                    data-gallery="portfolio-gallery-rarvlecon" class="glightbox featured-thumb">
+                    <img src="assets/img/projects/rarvlecon/rarvleconweb4.png" alt="Visualiseur RA 4">
+                  </a>
+                  <a href="assets/img/projects/rarvlecon/rarvleconweb5.png" title="Visualiseur RA - Vue 5"
+                    data-gallery="portfolio-gallery-rarvlecon" class="glightbox featured-thumb">
+                    <img src="assets/img/projects/rarvlecon/rarvleconweb5.png" alt="Visualiseur RA 5">
+                  </a>
+                </div>
+              </div>
+
+              <div class="featured-body">
+                <div class="featured-badges">
+                  <span class="badge-xr">Réalité augmentée</span>
+                  <span class="badge-live">En ligne</span>
+                </div>
+
+                <h3 class="featured-title">Visualiseur d'objets pédagogiques en réalité augmentée</h3>
+
+                <p class="featured-lead">
+                  Module embarquable dans un LMS : depuis sa leçon, l'apprenant explore un équipement industriel
+                  en 3D, puis le pose à taille réelle dans son atelier via la caméra de son téléphone — sans
+                  installer d'application. Chaque consultation est tracée jusqu'au Learning Record Store.
+                </p>
+
+                <ul class="featured-points">
+                  <li>
+                    <i class="bi bi-badge-ar"></i>
+                    <span><strong>Double chemin RA assumé</strong> — WebXR <em>immersive-ar</em> sur Android,
+                      AR Quick Look <em>.usdz</em> sur iOS, placement à l'échelle réelle avec ombre de contact.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-box"></i>
+                    <span><strong>Annotations ancrées en espace local</strong> du modèle : elles suivent ses
+                      rotations, sont occultées par la géométrie et décollées de la surface le long de leur
+                      normale.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-qr-code"></i>
+                    <span><strong>Bascule ordinateur → téléphone par QR code</strong> en poursuivant la même
+                      session : jeton à usage unique, les deux appareils alimentent un seul relevé.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-people"></i>
+                    <span><strong>Back-office sans développeur</strong> — l'inspecteur GLB lit l'en-tête du
+                      conteneur sans charger la géométrie et refuse un modèle hors budget, avec un motif
+                      explicite.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-universal-access"></i>
+                    <span><strong>Parcours texte accessible</strong> produisant exactement la même traçabilité
+                      que le parcours 3D — pas de seconde classe d'apprenants.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-shield-lock"></i>
+                    <span><strong>Jetons signés HMAC-SHA256</strong>, identité issue du jeton, URL d'assets
+                      signées et limitation de débit par session plutôt que par IP.</span>
+                  </li>
+                </ul>
+
+                <div class="featured-metrics">
+                  <div class="metric">
+                    <span class="metric-value">237</span>
+                    <span class="metric-label">tests PHPUnit · 1 095 assertions</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">27</span>
+                    <span class="metric-label">tests Vitest</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">215 Ko</span>
+                    <span class="metric-label">bundle initial · 66 Ko gzip</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">xAPI 1.0.3</span>
+                    <span class="metric-label">client LRS interchangeable</span>
+                  </div>
+                </div>
+
+                <p class="featured-note">
+                  <i class="bi bi-info-circle"></i>
+                  <span>Le modèle 3D en ligne est un modèle de substitution ; le pipeline de remplacement est
+                    outillé et attend son passage sous Blender. Le chemin iOS est validé structurellement, pas
+                    encore sur appareil.</span>
+                </p>
+
+                <div class="card-tech">
+                  <span class="tech-tag">React 19</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Three.js</span>
+                  <span class="tech-tag">React Three Fiber</span>
+                  <span class="tech-tag">WebXR</span>
+                  <span class="tech-tag">Laravel 13</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Web Components</span>
+                </div>
+
+                <div class="featured-actions">
+                  <a href="https://rarv.kodemeet.com/lecon/pompe-centrifuge-01" target="_blank" class="btn-demo">
+                    Voir la démo en ligne <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                  <div class="card-stats">
+                    <span><i class="bi bi-calendar3"></i> 2026</span>
+                    <span><i class="bi bi-bar-chart"></i> En ligne</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article><!-- End Projet phare 01 -->
+
+          <!-- Projet phare 02 — Laboratoire 3D -->
+          <article class="featured-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="featured-grid">
+
+              <div class="featured-visual">
+                <a href="assets/img/projects/rarvlabo/rarvlaboweb1.png"
+                  title="Laboratoire de formation interactif 3D - Vue principale"
+                  data-gallery="portfolio-gallery-rarvlabo" class="glightbox featured-visual-main">
+                  <img src="assets/img/projects/rarvlabo/rarvlaboweb1.png"
+                    alt="Laboratoire de formation interactif 3D">
+                </a>
+                <div class="featured-thumbs">
+                  <a href="assets/img/projects/rarvlabo/rarvlaboweb2.png" title="Laboratoire 3D - Vue 2"
+                    data-gallery="portfolio-gallery-rarvlabo" class="glightbox featured-thumb">
+                    <img src="assets/img/projects/rarvlabo/rarvlaboweb2.png" alt="Laboratoire 3D 2">
+                  </a>
+                  <a href="assets/img/projects/rarvlabo/rarvlaboweb3.png" title="Laboratoire 3D - Vue 3"
+                    data-gallery="portfolio-gallery-rarvlabo" class="glightbox featured-thumb">
+                    <img src="assets/img/projects/rarvlabo/rarvlaboweb3.png" alt="Laboratoire 3D 3">
+                  </a>
+                  <a href="assets/img/projects/rarvlabo/rarvlaboweb4.png" title="Laboratoire 3D - Vue 4"
+                    data-gallery="portfolio-gallery-rarvlabo" class="glightbox featured-thumb">
+                    <img src="assets/img/projects/rarvlabo/rarvlaboweb4.png" alt="Laboratoire 3D 4">
+                  </a>
+                </div>
+              </div>
+
+              <div class="featured-body">
+                <div class="featured-badges">
+                  <span class="badge-xr">Réalité virtuelle</span>
+                  <span class="badge-live">En ligne</span>
+                </div>
+
+                <h3 class="featured-title">Laboratoire de formation interactif 3D</h3>
+
+                <p class="featured-lead">
+                  Atelier de maintenance virtuel parcouru à la première personne dans le navigateur : l'apprenant
+                  se déplace entre huit postes de travail, y déclenche panneaux, vidéos et documents, passe un
+                  quiz noté corrigé côté serveur, et repart avec une attestation PDF.
+                </p>
+
+                <ul class="featured-points">
+                  <li>
+                    <i class="bi bi-shield-check"></i>
+                    <span><strong>Quiz corrigé côté serveur</strong> — la bonne réponse ne quitte jamais le
+                      backend, et un test automatisé échoue si <em>is_correct</em> réapparaît dans la réponse
+                      d'API.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-controller"></i>
+                    <span><strong>Navigation à la première personne</strong> — verrouillage du pointeur et ZQSD
+                      sur ordinateur, joystick virtuel tactile sur mobile.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-box"></i>
+                    <span><strong>Collisions capsule contre BVH</strong> via <em>three-mesh-bvh</em>, sur un mesh
+                      de collision dédié : on ne simule rien, on empêche seulement de traverser un mur.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-universal-access"></i>
+                    <span><strong>Confort visuel traité comme une exigence</strong> — pas de head bob, champ de
+                      vision réglable, <em>prefers-reduced-motion</em> respecté, mini-carte et déplacement guidé
+                      vers le poste suivant.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-speedometer2"></i>
+                    <span><strong>Éclairage précalculé en lightmaps</strong> sous Blender et détection de
+                      performance au démarrage — c'est ce qui rend la salle jouable à 30 fps sur téléphone.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-diagram-3"></i>
+                    <span><strong>Socle mutualisé avec le module RA</strong> — sessions, jetons, stockage et
+                      envoi xAPI partagés : la charge du projet est passée de 30 à 26 jours.</span>
+                  </li>
+                </ul>
+
+                <div class="featured-metrics">
+                  <div class="metric">
+                    <span class="metric-value">8</span>
+                    <span class="metric-label">postes · 4 types d'activité</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">30 fps</span>
+                    <span class="metric-label">cible mobile tenue</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">150 k</span>
+                    <span class="metric-label">triangles max · 60 draw calls</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">29</span>
+                    <span class="metric-label">tests Vitest</span>
+                  </div>
+                </div>
+
+                <p class="featured-note">
+                  <i class="bi bi-info-circle"></i>
+                  <span>La salle est validée en <em>blocking</em> et pleinement navigable ; son habillage 3D
+                    attend son passage sous Blender. Toutes les fonctionnalités sont opérationnelles avec les
+                    volumes actuels.</span>
+                </p>
+
+                <div class="card-tech">
+                  <span class="tech-tag">React 19</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Three.js</span>
+                  <span class="tech-tag">React Three Fiber</span>
+                  <span class="tech-tag">three-mesh-bvh</span>
+                  <span class="tech-tag">Laravel 13</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">xAPI 1.0.3</span>
+                </div>
+
+                <div class="featured-actions">
+                  <a href="https://rarv.kodemeet.com/labo/" target="_blank" class="btn-demo">
+                    Voir la démo en ligne <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                  <div class="card-stats">
+                    <span><i class="bi bi-calendar3"></i> 2026</span>
+                    <span><i class="bi bi-bar-chart"></i> En ligne</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article><!-- End Projet phare 02 -->
+
+        </div><!-- End Projets phares -->
+
+        <div class="portfolio-subhead" data-aos="fade-up">
+          <h3>Autres réalisations</h3>
+        </div>
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
@@ -1888,19 +2512,17 @@
               </div>
             </div><!-- End Kodemeet Card -->
 
-            <!-- Vivartbeatz Card -->
+            <!-- LeclaireurFormation Card -->
             <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web filter-mobile">
               <div class="portfolio-card">
                 <div class="card-image">
-                  <img src="assets/img/projects/vivartbeatz/vivartbeatz-img-principal.png" class="img-fluid"
-                    alt="Vivartbeatz">
+                  <img src="assets/img/projects/leclaireurformation/leclaireurformationweb1.png" class="img-fluid" alt="LeclaireurFormation">
                   <div class="card-overlay">
                     <div class="overlay-buttons">
-                      <a href="assets/img/projects/vivartbeatz/vivartbeatz-img-principal.png"
-                        title="Vivartbeatz - Vue principale" data-gallery="portfolio-gallery-vivartbeatz"
-                        class="glightbox btn-icon"><i class="bi bi-zoom-in"></i></a>
-                      <a href="https://vivartbeatz.com" target="_blank" class="btn-icon"><i
-                          class="bi bi-link-45deg"></i></a>
+                      <a href="assets/img/projects/leclaireurformation/leclaireurformationweb1.png" title="LeclaireurFormation - Vue principale" data-gallery="portfolio-gallery-leclaireur" class="glightbox btn-icon"><i class="bi bi-zoom-in"></i></a>
+                      <a href="https://leclaireurformation.com" target="_blank" class="btn-icon" title="Site web"><i class="bi bi-link-45deg"></i></a>
+                      <!-- TODO: remplacer # par l'URL Google Play de LeclaireurFormation -->
+                      <a href="#" target="_blank" class="btn-icon" title="Google Play"><i class="bi bi-google-play"></i></a>
                     </div>
                   </div>
                   <div class="card-category">
@@ -1910,76 +2532,254 @@
                 </div>
 
                 <div class="card-content">
-                  <h3 class="card-title">Vivartbeatz</h3>
+                  <h3 class="card-title">LeclaireurFormation</h3>
                   <p class="card-description">
-                    Application de vente de beats musicaux dédiée aux artistes burkinabè.
+                    Plateforme de préparation aux concours, web et mobile : banques de questions, sessions d'entraînement et suivi de progression des apprenants.
                   </p>
 
                   <div class="card-features">
                     <div class="feature-item">
                       <i class="bi bi-check-circle-fill"></i>
-                      <span>Lecture et gestion des beats</span>
+                      <span>Banques de questions par concours et par matière</span>
                     </div>
                     <div class="feature-item">
                       <i class="bi bi-check-circle-fill"></i>
-                      <span>Système de favoris</span>
+                      <span>Gestion des apprenants et des inscriptions</span>
                     </div>
                     <div class="feature-item">
                       <i class="bi bi-check-circle-fill"></i>
-                      <span>Paiements via API Orange</span>
+                      <span>Suivi de progression et historique des sessions</span>
                     </div>
                     <div class="feature-item">
                       <i class="bi bi-check-circle-fill"></i>
-                      <span>Commission pour arrangeurs</span>
+                      <span>Application Android publiée sur Google Play</span>
                     </div>
                   </div>
 
                   <div class="card-tech">
-                    <span class="tech-tag">React.js</span>
                     <span class="tech-tag">Laravel</span>
-                    <span class="tech-tag">REST API</span>
-                    <span class="tech-tag">API Orange</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">MySQL</span>
                   </div>
 
-                  <!-- Mini Gallery Vivartbeatz -->
+                  <!-- Mini Gallery LeclaireurFormation -->
                   <div class="mini-gallery">
                     <h4 class="gallery-title">Aperçus du projet</h4>
                     <div class="gallery-thumbs">
-                      <a href="assets/img/projects/vivartbeatz/vivartbeatz-img-1.png" title="Vivartbeatz - Accueil"
-                        data-gallery="portfolio-gallery-vivartbeatz" class="glightbox gallery-thumb">
-                        <img src="assets/img/projects/vivartbeatz/vivartbeatz-img-1.png" alt="Vivartbeatz 1">
+                      <a href="assets/img/projects/leclaireurformation/leclaireurformationapk1.jpg" title="LeclaireurFormation - Mobile 1" data-gallery="portfolio-gallery-leclaireur" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/leclaireurformation/leclaireurformationapk1.jpg" alt="LeclaireurFormation mobile 1">
                       </a>
-                      <a href="assets/img/projects/vivartbeatz/vivartbeatz-img-2.png" title="Vivartbeatz - Player"
-                        data-gallery="portfolio-gallery-vivartbeatz" class="glightbox gallery-thumb">
-                        <img src="assets/img/projects/vivartbeatz/vivartbeatz-img-2.png" alt="Vivartbeatz 2">
+                      <a href="assets/img/projects/leclaireurformation/leclaireurformationapk2.jpg" title="LeclaireurFormation - Mobile 2" data-gallery="portfolio-gallery-leclaireur" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/leclaireurformation/leclaireurformationapk2.jpg" alt="LeclaireurFormation mobile 2">
                       </a>
-                      <a href="assets/img/projects/vivartbeatz/vivartbeatz-img-3.png" title="Vivartbeatz - Paiement"
-                        data-gallery="portfolio-gallery-vivartbeatz" class="glightbox gallery-thumb">
-                        <img src="assets/img/projects/vivartbeatz/vivartbeatz-img-3.png" alt="Vivartbeatz 3">
-                      </a>
-                      <a href="assets/img/projects/vivartbeatz/vivartbeatz-img-4.png" title="Vivartbeatz - Favoris"
-                        data-gallery="portfolio-gallery-vivartbeatz" class="glightbox gallery-thumb">
-                        <img src="assets/img/projects/vivartbeatz/vivartbeatz-img-4.png" alt="Vivartbeatz 4">
-                      </a>
-                      <a href="assets/img/projects/vivartbeatz/vivartbeatz-img-5.png" title="Vivartbeatz - Dashboard"
-                        data-gallery="portfolio-gallery-vivartbeatz" class="glightbox gallery-thumb">
-                        <img src="assets/img/projects/vivartbeatz/vivartbeatz-img-5.png" alt="Vivartbeatz 5">
+                      <a href="assets/img/projects/leclaireurformation/leclaireurformationapk3.jpg" title="LeclaireurFormation - Mobile 3" data-gallery="portfolio-gallery-leclaireur" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/leclaireurformation/leclaireurformationapk3.jpg" alt="LeclaireurFormation mobile 3">
                       </a>
                     </div>
                   </div>
 
                   <div class="card-footer">
-                    <a href="https://vivartbeatz.com" target="_blank" class="btn-demo">
+                    <a href="https://leclaireurformation.com" target="_blank" class="btn-demo">
                       Voir le projet <i class="bi bi-arrow-right"></i>
                     </a>
                     <div class="card-stats">
-                      <span><i class="bi bi-calendar3"></i> 2024</span>
+                      <span><i class="bi bi-calendar3"></i> 2025</span>
                       <span><i class="bi bi-bar-chart"></i> En production</span>
                     </div>
                   </div>
                 </div>
               </div>
-            </div><!-- End Vivartbeatz Card -->
+            </div><!-- End LeclaireurFormation Card -->
+
+            <!-- Maiga Formations IPECO Card -->
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web filter-mobile">
+              <div class="portfolio-card">
+                <div class="card-image">
+                  <img src="assets/img/projects/maigaformationsipeco/maigaweb1.png" class="img-fluid" alt="Maiga Formations IPECO">
+                  <div class="card-overlay">
+                    <div class="overlay-buttons">
+                      <a href="assets/img/projects/maigaformationsipeco/maigaweb1.png" title="Maiga Formations IPECO - Vue principale" data-gallery="portfolio-gallery-maiga" class="glightbox btn-icon"><i class="bi bi-zoom-in"></i></a>
+                      <a href="https://maiga-formations-ipeco.com" target="_blank" class="btn-icon" title="Site web"><i class="bi bi-link-45deg"></i></a>
+                      <!-- TODO: remplacer # par l'URL Google Play de Maiga Formations IPECO -->
+                      <a href="#" target="_blank" class="btn-icon" title="Google Play"><i class="bi bi-google-play"></i></a>
+                    </div>
+                  </div>
+                  <div class="card-category">
+                    <span class="badge-web">Web</span>
+                    <span class="badge-mobile">Mobile</span>
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <h3 class="card-title">Maiga Formations IPECO</h3>
+                  <p class="card-description">
+                    Plateforme de formation en ligne de l'institut IPECO : gestion des sessions, des apprenants et des contenus pédagogiques, en web et en mobile.
+                  </p>
+
+                  <div class="card-features">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Gestion des sessions de formation</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Espace apprenant et suivi des inscriptions</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Bibliothèque de contenus pédagogiques</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Back-office administrateur complet</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Application mobile Android dédiée</span>
+                    </div>
+                  </div>
+
+                  <div class="card-tech">
+                    <span class="tech-tag">Laravel</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">MySQL</span>
+                  </div>
+
+                  <!-- Mini Gallery Maiga -->
+                  <div class="mini-gallery">
+                    <h4 class="gallery-title">Aperçus du projet</h4>
+                    <div class="gallery-thumbs">
+                      <a href="assets/img/projects/maigaformationsipeco/maigadesktop1.png" title="Maiga Formations IPECO - Desktop 1" data-gallery="portfolio-gallery-maiga" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/maigaformationsipeco/maigadesktop1.png" alt="Maiga desktop 1">
+                      </a>
+                      <a href="assets/img/projects/maigaformationsipeco/maigadesktop2.png" title="Maiga Formations IPECO - Desktop 2" data-gallery="portfolio-gallery-maiga" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/maigaformationsipeco/maigadesktop2.png" alt="Maiga desktop 2">
+                      </a>
+                      <a href="assets/img/projects/maigaformationsipeco/maigadesktop3.png" title="Maiga Formations IPECO - Desktop 3" data-gallery="portfolio-gallery-maiga" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/maigaformationsipeco/maigadesktop3.png" alt="Maiga desktop 3">
+                      </a>
+                      <a href="assets/img/projects/maigaformationsipeco/maigamobile1.jpeg" title="Maiga Formations IPECO - Mobile 1" data-gallery="portfolio-gallery-maiga" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/maigaformationsipeco/maigamobile1.jpeg" alt="Maiga mobile 1">
+                      </a>
+                      <a href="assets/img/projects/maigaformationsipeco/maigamobile2.jpeg" title="Maiga Formations IPECO - Mobile 2" data-gallery="portfolio-gallery-maiga" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/maigaformationsipeco/maigamobile2.jpeg" alt="Maiga mobile 2">
+                      </a>
+                      <a href="assets/img/projects/maigaformationsipeco/maigamobile3.jpeg" title="Maiga Formations IPECO - Mobile 3" data-gallery="portfolio-gallery-maiga" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/maigaformationsipeco/maigamobile3.jpeg" alt="Maiga mobile 3">
+                      </a>
+                      <a href="assets/img/projects/maigaformationsipeco/maigamobile4.jpeg" title="Maiga Formations IPECO - Mobile 4" data-gallery="portfolio-gallery-maiga" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/maigaformationsipeco/maigamobile4.jpeg" alt="Maiga mobile 4">
+                      </a>
+                      <a href="assets/img/projects/maigaformationsipeco/maigamobile5.jpeg" title="Maiga Formations IPECO - Mobile 5" data-gallery="portfolio-gallery-maiga" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/maigaformationsipeco/maigamobile5.jpeg" alt="Maiga mobile 5">
+                      </a>
+                      <a href="assets/img/projects/maigaformationsipeco/maigamobile6.jpeg" title="Maiga Formations IPECO - Mobile 6" data-gallery="portfolio-gallery-maiga" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/maigaformationsipeco/maigamobile6.jpeg" alt="Maiga mobile 6">
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <a href="https://maiga-formations-ipeco.com" target="_blank" class="btn-demo">
+                      Voir le projet <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <div class="card-stats">
+                      <span><i class="bi bi-calendar3"></i> 2025</span>
+                      <span><i class="bi bi-bar-chart"></i> En production</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Maiga Formations IPECO Card -->
+
+            <!-- Leader Étoile Formation Card -->
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web filter-mobile">
+              <div class="portfolio-card">
+                <div class="card-image">
+                  <img src="assets/img/projects/ledearetoileformation/leaderetoileformationsweb1.png" class="img-fluid" alt="Leader Étoile Formation">
+                  <div class="card-overlay">
+                    <div class="overlay-buttons">
+                      <a href="assets/img/projects/ledearetoileformation/leaderetoileformationsweb1.png" title="Leader Étoile Formation - Vue principale" data-gallery="portfolio-gallery-leader" class="glightbox btn-icon"><i class="bi bi-zoom-in"></i></a>
+                      <a href="https://leaderetoileformation.foca.website" target="_blank" class="btn-icon" title="Site web"><i class="bi bi-link-45deg"></i></a>
+                      <!-- TODO: remplacer # par l'URL Google Play de Leader Étoile Formation -->
+                      <a href="#" target="_blank" class="btn-icon" title="Google Play"><i class="bi bi-google-play"></i></a>
+                    </div>
+                  </div>
+                  <div class="card-category">
+                    <span class="badge-web">Web</span>
+                    <span class="badge-mobile">Mobile</span>
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <h3 class="card-title">Leader Étoile Formation</h3>
+                  <p class="card-description">
+                    SaaS de préparation aux concours : back-end Laravel exposant une API REST, consommée par une application Flutter construite en Clean Architecture.
+                  </p>
+
+                  <div class="card-features">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Architecture SaaS multi-tenant</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>API REST Laravel mutualisée web / mobile</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>App Flutter en Clean Architecture + BLoC</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Préparation aux concours par filière</span>
+                    </div>
+                  </div>
+
+                  <div class="card-tech">
+                    <span class="tech-tag">Laravel</span>
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Dart</span>
+                    <span class="tech-tag">BLoC</span>
+                    <span class="tech-tag">MySQL</span>
+                  </div>
+
+                  <!-- Mini Gallery Leader Étoile -->
+                  <div class="mini-gallery">
+                    <h4 class="gallery-title">Aperçus du projet</h4>
+                    <div class="gallery-thumbs">
+                      <a href="assets/img/projects/ledearetoileformation/leaderetoileformationapk1.jpeg" title="Leader Étoile Formation - Mobile 1" data-gallery="portfolio-gallery-leader" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/ledearetoileformation/leaderetoileformationapk1.jpeg" alt="Leader Étoile mobile 1">
+                      </a>
+                      <a href="assets/img/projects/ledearetoileformation/leaderetoileformationapk2.jpeg" title="Leader Étoile Formation - Mobile 2" data-gallery="portfolio-gallery-leader" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/ledearetoileformation/leaderetoileformationapk2.jpeg" alt="Leader Étoile mobile 2">
+                      </a>
+                      <a href="assets/img/projects/ledearetoileformation/leaderetoileformationapk3.jpeg" title="Leader Étoile Formation - Mobile 3" data-gallery="portfolio-gallery-leader" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/ledearetoileformation/leaderetoileformationapk3.jpeg" alt="Leader Étoile mobile 3">
+                      </a>
+                      <a href="assets/img/projects/ledearetoileformation/leaderetoileformationapk4.jpeg" title="Leader Étoile Formation - Mobile 4" data-gallery="portfolio-gallery-leader" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/ledearetoileformation/leaderetoileformationapk4.jpeg" alt="Leader Étoile mobile 4">
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <a href="https://leaderetoileformation.foca.website" target="_blank" class="btn-demo">
+                      Voir le projet <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <div class="card-stats">
+                      <span><i class="bi bi-calendar3"></i> 2025</span>
+                      <span><i class="bi bi-bar-chart"></i> En production</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Leader Étoile Formation Card -->
+
 
             <!-- BAOBAB-SCHOLAR Card -->
             <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web filter-mobile">
@@ -1989,7 +2789,8 @@
                   <div class="card-overlay">
                     <div class="overlay-buttons">
                       <a href="assets/img/projects/bs/bs-img-principale.jpeg" title="BAOBAB-SCHOLAR - Vue principale" data-gallery="portfolio-gallery-bs" class="glightbox btn-icon"><i class="bi bi-zoom-in"></i></a>
-                      <a href="#" target="_blank" class="btn-icon"><i class="bi bi-link-45deg"></i></a>
+                      <a href="https://baobab-scholar.com" target="_blank" class="btn-icon" title="Site web"><i class="bi bi-link-45deg"></i></a>
+                      <a href="https://play.google.com/store/apps/details?id=com.managredigital.bscholar" target="_blank" class="btn-icon" title="Google Play"><i class="bi bi-google-play"></i></a>
                     </div>
                   </div>
                   <div class="card-category">
@@ -2084,7 +2885,7 @@
                   <div class="card-overlay">
                     <div class="overlay-buttons">
                       <a href="assets/img/projects/afes/afes-img-principale.png" title="AFES - Vue principale" data-gallery="portfolio-gallery-afes" class="glightbox btn-icon"><i class="bi bi-zoom-in"></i></a>
-                      <a href="#" target="_blank" class="btn-icon"><i class="bi bi-link-45deg"></i></a>
+                      <a href="https://afes-quiz.com" target="_blank" class="btn-icon" title="Site web"><i class="bi bi-link-45deg"></i></a>
                     </div>
                   </div>
                   <div class="card-category">
@@ -2147,7 +2948,7 @@
                   </div>
 
                   <div class="card-footer">
-                    <a href="#" target="_blank" class="btn-demo">
+                    <a href="https://afes-quiz.com" target="_blank" class="btn-demo">
                       Voir le projet <i class="bi bi-arrow-right"></i>
                     </a>
                     <div class="card-stats">
@@ -2158,6 +2959,210 @@
                 </div>
               </div>
             </div><!-- End AFES Card -->
+
+            <!-- InGameStudio Card -->
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="card-image">
+                  <img src="assets/img/projects/ingamestudio/ingamestudioweb1.png" class="img-fluid" alt="InGameStudio">
+                  <div class="card-overlay">
+                    <div class="overlay-buttons">
+                      <a href="assets/img/projects/ingamestudio/ingamestudioweb1.png" title="InGameStudio - Vue principale" data-gallery="portfolio-gallery-ingamestudio" class="glightbox btn-icon"><i class="bi bi-zoom-in"></i></a>
+                      <a href="https://ingamestudio.foca.website" target="_blank" class="btn-icon" title="Site web"><i class="bi bi-link-45deg"></i></a>
+                    </div>
+                  </div>
+                  <div class="card-category">
+                    <span class="badge-web">Web</span>
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <h3 class="card-title">InGameStudio</h3>
+                  <p class="card-description">
+                    Place de marché d'instruments de musique : catalogue en ligne, mise en relation vendeurs / acheteurs et paiement intégré.
+                  </p>
+
+                  <div class="card-features">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Catalogue avec recherche et filtres</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Mise en relation vendeurs / acheteurs</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Paiement en ligne intégré</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Gestion des annonces et du stock vendeur</span>
+                    </div>
+                  </div>
+
+                  <div class="card-tech">
+                    <span class="tech-tag">Laravel</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">MySQL</span>
+                  </div>
+
+                  <!-- Mini Gallery InGameStudio -->
+                  <div class="mini-gallery">
+                    <h4 class="gallery-title">Aperçus du projet</h4>
+                    <div class="gallery-thumbs">
+                      <a href="assets/img/projects/ingamestudio/ingamestudioweb2.png" title="InGameStudio - Vue 2" data-gallery="portfolio-gallery-ingamestudio" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/ingamestudio/ingamestudioweb2.png" alt="InGameStudio 2">
+                      </a>
+                      <a href="assets/img/projects/ingamestudio/ingamestudioweb3.png" title="InGameStudio - Vue 3" data-gallery="portfolio-gallery-ingamestudio" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/ingamestudio/ingamestudioweb3.png" alt="InGameStudio 3">
+                      </a>
+                      <a href="assets/img/projects/ingamestudio/ingamestudioweb4.png" title="InGameStudio - Vue 4" data-gallery="portfolio-gallery-ingamestudio" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/ingamestudio/ingamestudioweb4.png" alt="InGameStudio 4">
+                      </a>
+                      <a href="assets/img/projects/ingamestudio/ingamestudioweb5.png" title="InGameStudio - Vue 5" data-gallery="portfolio-gallery-ingamestudio" class="glightbox gallery-thumb">
+                        <img src="assets/img/projects/ingamestudio/ingamestudioweb5.png" alt="InGameStudio 5">
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <a href="https://ingamestudio.foca.website" target="_blank" class="btn-demo">
+                      Voir le projet <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <div class="card-stats">
+                      <span><i class="bi bi-calendar3"></i> 2025</span>
+                      <span><i class="bi bi-bar-chart"></i> En production</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End InGameStudio Card -->
+
+            <!-- BetCash Card -->
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web filter-mobile">
+              <div class="portfolio-card">
+                <div class="card-image">
+                  <img src="assets/img/projects/betcash/betcashapk1.jpg" class="img-fluid" alt="BetCash">
+                  <div class="card-overlay">
+                    <div class="overlay-buttons">
+                      <a href="assets/img/projects/betcash/betcashapk1.jpg" title="BetCash - Vue principale" data-gallery="portfolio-gallery-betcash" class="glightbox btn-icon"><i class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                  <div class="card-category">
+                    <span class="badge-mobile">Mobile</span>
+                    <span class="badge-dev">En développement</span>
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <h3 class="card-title">BetCash</h3>
+                  <p class="card-description">
+                    Solution de gestion pour agences de paris sportifs : back-office web Laravel + Inertia / React, doublé d'une application Flutter pour les responsables de points de vente.
+                  </p>
+
+                  <div class="card-features">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Back-office Laravel 13 + Inertia / React</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Application Flutter en BLoC pour les agences</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Notifications temps réel via Laravel Reverb</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>API authentifiée par Laravel Sanctum</span>
+                    </div>
+                  </div>
+
+                  <div class="card-tech">
+                    <span class="tech-tag">Laravel</span>
+                    <span class="tech-tag">Inertia.js</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                  </div>
+
+                  <div class="card-footer">
+                    <span class="btn-demo-soon">
+                      <i class="bi bi-hourglass-split"></i> Démo sur demande
+                    </span>
+                    <div class="card-stats">
+                      <span><i class="bi bi-calendar3"></i> 2026</span>
+                      <span><i class="bi bi-bar-chart"></i> En développement</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End BetCash Card -->
+
+            <!-- NafaStock Card -->
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-mobile">
+              <div class="portfolio-card">
+                <div class="card-image">
+                  <img src="assets/img/projects/nafastock/nafastockapk1.jpg" class="img-fluid" alt="NafaStock">
+                  <div class="card-overlay">
+                    <div class="overlay-buttons">
+                      <a href="assets/img/projects/nafastock/nafastockapk1.jpg" title="NafaStock - Vue principale" data-gallery="portfolio-gallery-nafastock" class="glightbox btn-icon"><i class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                  <div class="card-category">
+                    <span class="badge-mobile">Mobile</span>
+                    <span class="badge-dev">En développement</span>
+                  </div>
+                </div>
+
+                <div class="card-content">
+                  <h3 class="card-title">NafaStock</h3>
+                  <p class="card-description">
+                    Application de gestion de stock pensée pour les petits commerçants : conçue en offline-first, elle reste pleinement utilisable sans connexion.
+                  </p>
+
+                  <div class="card-features">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Suivi des entrées et sorties de stock</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Offline-first, synchronisation à la reconnexion</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Alertes de seuil et de rupture</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span>Interface simplifiée pour un usage terrain</span>
+                    </div>
+                  </div>
+
+                  <div class="card-tech">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Dart</span>
+                    <span class="tech-tag">BLoC</span>
+                    <span class="tech-tag">Laravel</span>
+                    <span class="tech-tag">SQLite</span>
+                  </div>
+
+                  <div class="card-footer">
+                    <span class="btn-demo-soon">
+                      <i class="bi bi-hourglass-split"></i> Démo sur demande
+                    </span>
+                    <div class="card-stats">
+                      <span><i class="bi bi-calendar3"></i> 2026</span>
+                      <span><i class="bi bi-bar-chart"></i> En développement</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End NafaStock Card -->
 
           </div><!-- End Portfolio Container -->
         </div>
